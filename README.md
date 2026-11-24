@@ -64,6 +64,7 @@ Você escolhe com quem conversar no seletor **"Conversar com"** e pode trocar qu
 - **Educadas e zoeiras:** respondem cumprimentos, mas qualquer pergunta nada a ver vira piada, e elas trazem você de volta para o portfólio.
 - **Gamificação:** XP, nível, 7 conquistas e o selo **Super Fã** para quem explorar tudo.
 - **Histórico** da conversa e botão para recomeçar.
+- **Português e inglês:** o botão **EN / PT** no topo troca o idioma da página inteira, das falas e das descrições dos projetos, e repete a última resposta no novo idioma. A escolha fica salva no navegador, e quem chega pela primeira vez vê o idioma do próprio navegador.
 - **Totalmente responsivo:** do celular pequeno (320px) ao monitor grande, sem zoom. Com o celular deitado, a personagem vai para a esquerda e o diálogo para a direita.
 - **Acessível:** navegação por teclado, foco visível e respeito ao `prefers-reduced-motion`.
 
@@ -89,6 +90,8 @@ Você escolhe com quem conversar no seletor **"Conversar com"** e pode trocar qu
 | `o que falta?` | o que ainda falta para o selo Super Fã |
 | qualquer outra coisa | uma zoeira 😹 |
 
+As perguntas funcionam em inglês também (`about`, `contact`, `personal projects`, `thanks`…), em qualquer um dos dois idiomas.
+
 ## 🏆 Conquistas
 
 | Conquista | Como desbloquear |
@@ -105,14 +108,15 @@ Você escolhe com quem conversar no seletor **"Conversar com"** e pode trocar qu
 
 ```
 bot-portfolio-game/
-├── index.html            # estrutura da página
+├── index.html            # estrutura da página (textos marcados com data-i18n)
 ├── favicon.ico
 ├── vercel.json           # opcional, só para deploy na Vercel
 └── assets/
     ├── css/
     │   └── style.css     # caixas pixel, HUD, diálogo, painéis, responsividade
     ├── js/
-    │   ├── data.js       # todos os projetos (é aqui que você edita)
+    │   ├── i18n.js       # idioma atual e textos fixos da página em PT e EN
+    │   ├── data.js       # todos os projetos e a versão em inglês deles (é aqui que você edita)
     │   ├── scene.js      # o mundo em <canvas>: céu, planeta, ilhas, personagens
     │   ├── ui.js         # XP, conquistas, selo, histórico, diálogo com digitação
     │   ├── bot.js        # falas da Nébula e da Mari e reconhecimento de perguntas
@@ -158,6 +162,14 @@ Abra `assets/js/data.js`.
 
 **Projeto integrador (API):** adicione um objeto à lista `API` com `id`, `n` (nome), `y` (ano), `sem`, `co` (empresa parceira), `role`, `r` (repositório ou `null`), `d` (descrição), `t` (tecnologias) e `pts` (o que eu fiz).
 
+**Versão em inglês:** no mesmo arquivo, adicione o projeto ao objeto `EN`, usando o nome do repositório (ou o `id`, nas APIs) como chave. Só precisa incluir o que muda:
+
+```js
+"meu-novo-agente":{n:"Reading Agent",d:"Agent that organizes my reading list."},
+```
+
+Nas APIs também dá para traduzir `sem`, `co`, `role` e `pts`. Se esquecer, o projeto aparece em português no modo inglês, e o console do navegador avisa quais estão faltando.
+
 O link para o GitHub é montado sozinho, e o projeto já entra nas buscas, nas listas por ano e na contagem do selo Super Fã.
 
 </details>
@@ -169,11 +181,13 @@ O link para o GitHub é montado sozinho, e o projeto já entra nas buscas, nas l
 
 As respostas ficam no objeto `R` em `assets/js/bot.js`. Cada função chama `say(título, conteúdo)`: o título é digitado letra por letra e o conteúdo aparece em seguida.
 
-Para que cada personagem fale do seu jeito, use `V(falaDaNebula, falaDaMari)`:
+Para que cada personagem fale do seu jeito, use `V(falaDaNebula, falaDaMari)`. Para o idioma, use `L(português, inglês)`. Os dois se combinam:
 
 ```js
-say(V("A stack da <b>Mari</b>!", "A minha <b>stack</b>!"), ...)
+say(V(L("A stack da <b>Mari</b>!", "Mari's <b>stack</b>!"), L("A minha <b>stack</b>!", "My <b>stack</b>!")), ...)
 ```
+
+Os textos fixos da página (botões, painéis, placeholder) ficam no objeto `UI` em `assets/js/i18n.js`.
 
 As zoeiras ficam na função `nope()`, e as palavras-chave ficam na função `route()`.
 
@@ -193,6 +207,8 @@ Por exemplo, para mudar o cabelo da Mari, troque as cores `h` (cabelo) e `H` (br
 ## 🌐 Deploy
 
 O site está publicado no **GitHub Pages**: **https://mariinetic.github.io/bot-portfolio-game/**
+
+Para mandar o link já em inglês (no LinkedIn, por exemplo), acrescente `?lang=en`: **https://mariinetic.github.io/bot-portfolio-game/?lang=en**
 
 Para publicar uma cópia:
 1. Suba os arquivos para um repositório no GitHub, com o `index.html` na raiz.

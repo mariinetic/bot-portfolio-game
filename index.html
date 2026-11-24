@@ -19,16 +19,17 @@
   <canvas id="cv" aria-hidden="true"></canvas>
 
   <header class="hud">
-    <div class="title"><i></i>NÉBULA<span class="lbl"> · PORTFÓLIO DA MARI</span></div>
+    <div class="title"><i></i>NÉBULA<span class="lbl" data-i18n="sub"> · PORTFÓLIO DA MARI</span></div>
     <span class="sp"></span>
-    <div class="pick" role="radiogroup" aria-label="Conversar com">
-      <span class="lbl pk">CONVERSAR COM</span>
+    <div class="pick" role="radiogroup" aria-label="Conversar com" data-i18n-attr="aria-label:talkWithAria">
+      <span class="lbl pk" data-i18n="talkWith">CONVERSAR COM</span>
       <button role="radio" aria-checked="true" data-g="nebula" class="on">Nébula</button>
       <button role="radio" aria-checked="false" data-g="mari">Mari</button>
     </div>
-    <button class="chip" id="histBtn" aria-expanded="false" aria-controls="histPanel">≡<span class="lbl"> HISTÓRICO</span></button>
-    <button class="chip" id="pill" aria-expanded="false" aria-controls="panel">★<span class="lbl"> SUPER FÃ</span> <b id="pillPct">0%</b></button>
-    <button class="chip" id="restart" aria-label="Recomeçar conversa" title="Recomeçar">↺</button>
+    <button class="chip" id="histBtn" aria-expanded="false" aria-controls="histPanel">≡<span class="lbl" data-i18n="hist"> HISTÓRICO</span></button>
+    <button class="chip" id="pill" aria-expanded="false" aria-controls="panel">★<span class="lbl" data-i18n="fan"> SUPER FÃ</span> <b id="pillPct">0%</b></button>
+    <button class="chip lang" id="langBtn" data-i18n="langBtn" data-i18n-attr="aria-label:langAria,title:langAria" aria-label="Switch to English" title="Switch to English">EN</button>
+    <button class="chip" id="restart" aria-label="Recomeçar conversa" title="Recomeçar" data-i18n-attr="aria-label:restart,title:restartT">↺</button>
   </header>
 
   <div class="talk" id="talk" aria-live="polite">
@@ -40,41 +41,42 @@
   </div>
 
   <div class="panel pxbox" id="panel" hidden>
-    <div class="row"><div><h4>SUA VISITA</h4><span><b id="xpVal">0</b> XP</span></div><span class="lv">LV <span id="lv">1</span></span></div>
+    <div class="row"><div><h4 data-i18n="visit">SUA VISITA</h4><span><b id="xpVal">0</b> XP</span></div><span class="lv">LV <span id="lv">1</span></span></div>
     <div class="track"><i id="xpBar"></i></div>
-    <h4>CONQUISTAS · <span id="achVal">0</span>/7</h4>
+    <h4><span data-i18n="ach">CONQUISTAS</span> · <span id="achVal">0</span>/7</h4>
     <ul class="ach" id="achList"></ul>
-    <div class="row"><h4>SELO SUPER FÃ</h4><span id="fanPct">0%</span></div>
+    <div class="row"><h4 data-i18n="seal">SELO SUPER FÃ</h4><span id="fanPct">0%</span></div>
     <div class="track gold"><i id="fanBar"></i></div>
-    <p class="meta" style="margin:0 0 12px">Veja todos os projetos e as seções sobre a Mari para ganhar o selo.</p>
-    <button class="btn" data-q="o que falta" data-l="O que falta para o selo?">O que falta?</button>
+    <p class="meta" style="margin:0 0 12px" data-i18n="sealHint">Veja todos os projetos e as seções sobre a Mari para ganhar o selo.</p>
+    <button class="btn" data-q="o que falta" data-l="O que falta para o selo?" data-i18n="missing" data-i18n-attr="data-l:missingL">O que falta?</button>
   </div>
-  <div class="panel pxbox" id="histPanel" hidden><h4>HISTÓRICO DA CONVERSA</h4><ul class="hist" id="hist"></ul></div>
+  <div class="panel pxbox" id="histPanel" hidden><h4 data-i18n="histTitle">HISTÓRICO DA CONVERSA</h4><ul class="hist" id="hist"></ul></div>
 
   <div class="dock" id="dock">
     <div class="inner">
       <div class="choices" id="choices"></div>
       <div class="bar">
-        <div class="menu" aria-label="Atalhos">
-          <button class="chip" data-q="sobre">SOBRE</button>
-          <button class="chip" data-q="faculdade">FATEC</button>
-          <button class="chip" data-q="projetos pessoais">PESSOAIS</button>
-          <button class="chip" data-q="tecnologias">STACK</button>
-          <button class="chip" data-q="contato">CONTATO</button>
+        <div class="menu" aria-label="Atalhos" data-i18n-attr="aria-label:shortcuts">
+          <button class="chip" data-q="sobre" data-i18n="mAbout">SOBRE</button>
+          <button class="chip" data-q="faculdade" data-i18n="mFatec">FATEC</button>
+          <button class="chip" data-q="projetos pessoais" data-i18n="mPes">PESSOAIS</button>
+          <button class="chip" data-q="tecnologias" data-i18n="mStack">STACK</button>
+          <button class="chip" data-q="contato" data-i18n="mContact">CONTATO</button>
         </div>
         <form id="form">
-          <label for="q" style="position:absolute;left:-9999px">Pergunte à Nébula</label>
-          <input id="q" autocomplete="off" maxlength="80" placeholder="Pergunte: Vue, 2025, Timesync...">
-          <button class="send" type="submit">FALAR</button>
+          <label for="q" style="position:absolute;left:-9999px" data-i18n="askLabel">Pergunte à Nébula</label>
+          <input id="q" autocomplete="off" maxlength="80" placeholder="Pergunte: Vue, 2025, Timesync..." data-i18n-attr="placeholder:ph">
+          <button class="send" type="submit" data-i18n="send">FALAR</button>
         </form>
       </div>
     </div>
   </div>
 
-  <div class="overlay" id="fanOverlay" hidden role="dialog" aria-modal="true" aria-labelledby="fanTitle"><div class="ocard pxbox"><div class="seal"><span><b>★</b>SUPER<br>FÃ</span></div><h2 id="fanTitle">Você é Super Fã!</h2><p>Viu todos os projetos e tudo sobre a Mari. Ela vai adorar saber, que tal mandar um oi?</p><div class="row"><button class="btn btn-primary" id="fanContact">Falar com a Mari</button><button class="btn" id="fanClose">Continuar</button></div></div></div>
+  <div class="overlay" id="fanOverlay" hidden role="dialog" aria-modal="true" aria-labelledby="fanTitle"><div class="ocard pxbox"><div class="seal"><span data-i18n-html="sealBadge"><b>★</b>SUPER<br>FÃ</span></div><h2 id="fanTitle" data-i18n="fanTitle">Você é Super Fã!</h2><p data-i18n="fanText">Viu todos os projetos e tudo sobre a Mari. Ela vai adorar saber, que tal mandar um oi?</p><div class="row"><button class="btn btn-primary" id="fanContact" data-i18n="fanContact">Falar com a Mari</button><button class="btn" id="fanClose" data-i18n="fanClose">Continuar</button></div></div></div>
 </div>
 <div class="toast pxbox" id="toast" hidden role="status"></div>
 
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/data.js"></script>
 <script src="assets/js/scene.js"></script>
 <script src="assets/js/ui.js"></script>
