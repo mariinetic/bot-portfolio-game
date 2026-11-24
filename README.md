@@ -119,13 +119,6 @@ Para ensinar novas palavras-chave, edite a função `route()` no mesmo arquivo.
 
 As duas são desenhadas em código, em `assets/js/scene.js`. Cada linha de `SPRITE` (Nébula), `MARI` ou `WING` (as asas da fadinha) é uma fileira de pixels, e cada letra é uma cor definida em `COL` ou `MC`. Por exemplo, para mudar o cabelo da Mari, troque as cores `h` (cabelo) e `H` (brilho) em `MC`.
 
-## Publicar no GitHub Pages
-
-1. Suba esta pasta para um repositório no GitHub.
-2. Vá em **Settings → Pages**.
-3. Em **Source**, escolha **Deploy from a branch**, depois a branch `main` e a pasta `/ (root)`.
-4. Em um ou dois minutos o site estará em `https://<seu-usuario>.github.io/<nome-do-repo>/`.
-
 ## Créditos
 
 - **Nébula e Mari:** personagens originais em pixel art, desenhadas em código.
