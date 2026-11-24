@@ -1,6 +1,6 @@
 /*
  * data.js — projetos do portfólio
- * Para adicionar um projeto, inclua uma linha em API, DISC ou PES. Veja o README.
+ * Para adicionar um projeto, inclua uma linha em API, DISC ou PES e a versão em inglês em EN. Veja o README.
  */
 
 /* ---------- dados ---------- */
@@ -49,3 +49,88 @@ const PES=[
 const ALL=[...API,...DISC,...PES];
 const byId=Object.fromEntries(ALL.map(p=>[p.id,p]));
 const CATS=[...new Set(PES.map(p=>p.c))];
+
+/* ---------- versão em inglês ----------
+ * Chave: o id do projeto (nas APIs) ou o nome do repositório (nas disciplinas e pessoais).
+ * Só precisa incluir o que muda: n (nome), d (descrição), sem, co, role e pts.
+ * O que não estiver aqui aparece em português mesmo no modo inglês.
+ */
+const EN={
+ calc:{n:"Scientific Calculator",sem:"1st semester",co:"FATEC (the Computer Organization professor as the client)",role:"Developer",
+  d:"Terminal calculator with math operations, base conversion and input validation, migrated from VisualG to TypeScript.",
+  pts:["Implemented the quadratic equation (Bhaskara's formula) with a union return type","Wrote an iterative square root without Math.sqrt()","Helped build the main menu with do...while","Proposed the modular code structure"]},
+ pacer:{sem:"2nd semester",role:"Developer",
+  d:"JavaFX desktop app for peer skill assessment at the end of each sprint, with average reports per student and per team.",
+  pts:["Login screen and password recovery controller","Real-time student ID (RA) validation","Navigation with sceneSwitcher and data access with AlunoDAO","Relational MySQL database modeling with referential integrity"]},
+ timesync:{sem:"3rd semester",role:"Product Owner and full-stack dev",
+  d:"Time-tracking web app for outsourced employees, with hour analysis and exportable reports.",
+  pts:["Angular front end: employee and timesheet screens, filters, pagination, dashboards and export","Timesheet endpoints and JWT authentication in Spring","MySQL modeling with stored procedures and composite indexes: queries dropped from ~4s to ~400ms","Led a team of 6 people and the backlog in Jira"]},
+ cimob:{sem:"4th semester",co:"São José dos Campos City Hall",role:"Product Owner and full-stack dev",
+  d:"Analytics platform for traffic speed camera data, with dashboards, georeferenced maps and automatic alerts.",
+  pts:["The whole Vue.js front end, from the Figma prototype to production","Telegram alert service scheduled every 5 minutes","User manual, installation guide and sprint presentations"]},
+ scars:{sem:"5th semester",role:"Frontend dev and DevOps track",
+  d:"Data Warehouse with multidimensional analysis of project costs (materials, technical hours and budget) and management dashboards.",
+  pts:["Materials, Hours and Consolidated screens with KPIs, charts and a budget deviation indicator","Monitoring with Prometheus, Alertmanager, Grafana and Logstash","Separate dev and prod environments in Docker Compose","K6 load tests in CI/CD, with staging and manual approval for production"]},
+ akpedia:{sem:"6th semester",role:"Developer",
+  d:"Automated solution to classify and organize technical documents.",
+  pts:["PDF download endpoint with inline viewing, ETag caching and Range requests","Search enriched with the matching snippet and the chunk position","Pre-analysis route that suggests the category without saving the document","Search and listing restricted to approved documents"]},
+
+ "kitty-runner":{d:"2D platformer with levels, enemies, scoring, achievements, mobile controls and a persistent global leaderboard. It's the visual inspiration for this chatbot."},
+ "masanori-nosql":{n:"NoSQL (exercises)",d:"Exercises and projects from the unstructured databases course."},
+ "vue-lab420252":{d:"Development lab with Vue."},
+ "springlab420252":{d:"Spring Boot lab with JPA entities and CRUD REST endpoints."},
+ "bertoti":{n:"Prof. Bertoti's projects",d:"Projects from Professor Giuliano Bertoti's classes."},
+ "Estrutura-Dados":{n:"Data Structures",d:"Commented implementation of the main data structures."},
+ "LP1-Java":{d:"Official practice and exercises from Programming Language I."},
+ "Intesivo-TS":{n:"TypeScript Bootcamp",d:"TypeScript intensive course from the database lab."},
+ "sql-learning":{d:"Database practice: creating tables, manipulating data and writing simple queries."},
+ "Aulas-de-Idiomas":{n:"Language Classes",d:"SQL application to manage students, schools and language classes."},
+ "Operac-conjuntos":{n:"Set Operations",d:"Set operations: union, intersection, difference and complement."},
+ "Matriz3x3":{n:"3x3 Matrix",d:"3x3 matrix based on a discrete math class."},
+ "Venn-Diagrama":{n:"Venn Diagram",d:"Venn diagrams and sets."},
+ "Quizz-MD":{n:"Discrete Math Quiz",d:"Quiz with questions from the course textbook."},
+ "Landing-page-Boole":{n:"Boole landing page",d:"A page about George Boole."},
+
+ "tradutor-SQLBigQuery":{n:"BigQuery SQL Translator",d:"Turns questions in Portuguese into BigQuery SQL, with optional validation and execution."},
+ "daily-agent":{d:"CLAIR Agent: plans the workday and protects focus blocks."},
+ "transcript-agent":{d:"Generates subtitles and summaries for videos."},
+ "study-agent":{d:"Study plan agent with a human in the loop, for ENEM Geography (Brazil's national high school exam)."},
+ "Quick-agents":{d:"Exercises and experiments from an AI agents course."},
+ "langchain-course":{n:"LangChain Course",d:"LangChain course repository."},
+ "langgraph-course":{n:"LangGraph Course",d:"LangGraph course repository."},
+ "TelegramChatBotWithOllama":{d:"Chococat Bot: a Telegram chatbot with sentiment analysis, using Ollama."},
+ "cat-neural":{d:"Computer vision web app that detects cats and analyzes facial landmarks."},
+ "ml-notebooks":{d:"Study notebooks and experiments in machine learning and data science."},
+ "data-science-course":{n:"Data Science Course",d:"Exercises from a data scientist fundamentals course."},
+ "Cat-Coffee":{d:"Multiplayer game made to study Python."},
+ "Piece-Naval":{d:"Battleship in Java with One Piece characters."},
+ "MyMelody-Coffee":{d:"Coffee shop menu in Java with a My Melody theme."},
+ "Kitty-Calculator":{d:"Addition and subtraction calculator in Java with a Hello Kitty theme."},
+ "Bichinho-Virtual":{n:"Virtual Pet",d:"Virtual pet in Java, from the Santander Coders 2024 bootcamp, to practice OOP."},
+ "Amo-Travel-App":{d:"Travel app created in Voitto's UI/UX course, following the client's specifications."},
+ "Previs-o-IA":{n:"Weather Forecast",d:"Weather forecast website using the OpenWeather API, with AI supporting the development."},
+ "site-bio":{d:"Login screen for a biomedicine seminar."},
+ "Calculadora-de-IMC":{n:"BMI Calculator",d:"First project: a BMI calculator to learn programming and VS Code."},
+ "Diagramas-Mermaid":{n:"Mermaid Diagrams",d:"Study of the Mermaid language for diagrams and flowcharts."},
+ "dio-lab-open-source":{d:"DIO lab on how to contribute to open source projects."},
+ "mariinetic":{n:"Profile README",d:"Custom GitHub profile README."},
+ "Java-Exercises":{d:"Java logic exercises with unit tests."},
+ "projeto-junit":{n:"JUnit Project",d:"Testing project with JUnit."},
+ "Registro-Alunos-Collection":{n:"Student Registry",d:"System to register the students in a class and their four weighted grades."},
+ "AreaChecker":{d:"Area calculation for geometric shapes with OOP and polymorphism."},
+ "java-practice":{d:"Solved exercises on fundamental Java concepts."},
+ "projeto-baralho-array":{n:"Deck of Cards with Arrays",d:"Deck of cards with arrays: shuffle, deal and print."},
+ "HelloWorld-Java":{d:"First test in IntelliJ, on the Santander Coders 2024 Backend track."},
+ "Desafios-py":{n:"Python Challenges",d:"Programming challenges in Python."}
+};
+const CAT_EN={"Projetos integradores (API)":"Integrated projects (API)","NoSQL":"NoSQL","Laboratórios web":"Web labs","Programação e estruturas":"Programming and data structures","Banco de dados":"Databases","Matemática discreta":"Discrete math",
+ "IA e agentes":"AI and agents","Dados e machine learning":"Data and machine learning","Jogos e projetos criativos":"Games and creative projects","Web e design":"Web and design","Estudos de Java e lógica":"Java and logic studies"};
+const TAG_EN={"Visão computacional":"Computer vision"};
+
+/* acesso aos textos no idioma atual: tr(p,"d") devolve a descrição em inglês se existir */
+const ENX=Object.fromEntries(Object.entries(EN).map(([k,v])=>[k.toLowerCase(),v]));
+const tr=(p,k)=>lang==="en"&&ENX[p.id]&&ENX[p.id][k]!=null?ENX[p.id][k]:p[k];
+const pn=p=>tr(p,"n");
+const cn=c=>L(c,CAT_EN[c]||c);
+const tn=t=>L(t,TAG_EN[t]||t);
+ALL.filter(p=>!ENX[p.id]||!ENX[p.id].d).forEach(p=>console.warn("[i18n] sem descrição em inglês:",p.r||p.id));
