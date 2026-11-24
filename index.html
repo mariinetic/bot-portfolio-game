@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Portfólio da Mariana</title>
+<meta name="theme-color" content="#3a1450">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="description" content="Portfólio interativo da Mariana Oliveira: converse com a Nébula ou com a Mari e conheça os projetos da Fatec e os projetos pessoais.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="game" id="game">
+  <canvas id="cv" aria-hidden="true"></canvas>
+
+  <header class="hud">
+    <div class="title"><i></i>NÉBULA<span class="lbl"> · PORTFÓLIO DA MARI</span></div>
+    <span class="sp"></span>
+    <div class="pick" role="radiogroup" aria-label="Conversar com">
+      <span class="lbl pk">CONVERSAR COM</span>
+      <button role="radio" aria-checked="true" data-g="nebula" class="on">Nébula</button>
+      <button role="radio" aria-checked="false" data-g="mari">Mari</button>
+    </div>
+    <button class="chip" id="histBtn" aria-expanded="false" aria-controls="histPanel">≡<span class="lbl"> HISTÓRICO</span></button>
+    <button class="chip" id="pill" aria-expanded="false" aria-controls="panel">★<span class="lbl"> SUPER FÃ</span> <b id="pillPct">0%</b></button>
+    <button class="chip" id="restart" aria-label="Recomeçar conversa" title="Recomeçar">↺</button>
+  </header>
+
+  <div class="talk" id="talk" aria-live="polite">
+    <div class="dlg" id="dlg">
+      <span class="name" id="nameTag">NÉBULA</span>
+      <div class="box pxbox"><div class="scroll" id="scroll"><div id="asked"></div><p class="head" id="head"></p><div class="body" id="body"></div></div></div>
+      <svg class="tail" id="tail" viewBox="0 0 9 5" aria-hidden="true"><path d="M0 0h9v1H8v1H7v1H6v1H5v1H4V4H3V3H2V2H1V1H0z" fill="#4a1d4a"/><path d="M1 0h7v1H7v1H6v1H5v1H4V3H3V2H2V1H1z" fill="#fffaff"/></svg>
+    </div>
+  </div>
+
+  <div class="panel pxbox" id="panel" hidden>
+    <div class="row"><div><h4>SUA VISITA</h4><span><b id="xpVal">0</b> XP</span></div><span class="lv">LV <span id="lv">1</span></span></div>
+    <div class="track"><i id="xpBar"></i></div>
+    <h4>CONQUISTAS · <span id="achVal">0</span>/7</h4>
+    <ul class="ach" id="achList"></ul>
+    <div class="row"><h4>SELO SUPER FÃ</h4><span id="fanPct">0%</span></div>
+    <div class="track gold"><i id="fanBar"></i></div>
+    <p class="meta" style="margin:0 0 12px">Veja todos os projetos e as seções sobre a Mari para ganhar o selo.</p>
+    <button class="btn" data-q="o que falta" data-l="O que falta para o selo?">O que falta?</button>
+  </div>
+  <div class="panel pxbox" id="histPanel" hidden><h4>HISTÓRICO DA CONVERSA</h4><ul class="hist" id="hist"></ul></div>
+
+  <div class="dock" id="dock">
+    <div class="inner">
+      <div class="choices" id="choices"></div>
+      <div class="bar">
+        <div class="menu" aria-label="Atalhos">
+          <button class="chip" data-q="sobre">SOBRE</button>
+          <button class="chip" data-q="faculdade">FATEC</button>
+          <button class="chip" data-q="projetos pessoais">PESSOAIS</button>
+          <button class="chip" data-q="tecnologias">STACK</button>
+          <button class="chip" data-q="contato">CONTATO</button>
+        </div>
+        <form id="form">
+          <label for="q" style="position:absolute;left:-9999px">Pergunte à Nébula</label>
+          <input id="q" autocomplete="off" maxlength="80" placeholder="Pergunte: Vue, 2025, Timesync...">
+          <button class="send" type="submit">FALAR</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="fanOverlay" hidden role="dialog" aria-modal="true" aria-labelledby="fanTitle"><div class="ocard pxbox"><div class="seal"><span><b>★</b>SUPER<br>FÃ</span></div><h2 id="fanTitle">Você é Super Fã!</h2><p>Viu todos os projetos e tudo sobre a Mari. Ela vai adorar saber, que tal mandar um oi?</p><div class="row"><button class="btn btn-primary" id="fanContact">Falar com a Mari</button><button class="btn" id="fanClose">Continuar</button></div></div></div>
+</div>
+<div class="toast pxbox" id="toast" hidden role="status"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/scene.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/bot.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
