@@ -1,77 +1,132 @@
 <div align="center">
 
-<img src="assets/img/nebula.svg" height="120" alt="Nébula, a gatinha-guia em pixel art">&nbsp;&nbsp;&nbsp;<img src="assets/img/mari.svg" height="152" alt="Mari, a fadinha em pixel art">
+<img src="assets/img/nebula.svg" height="110" alt="Nébula, a gatinha-guia em pixel art">&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/mari.svg" height="140" alt="Mari, a fadinha em pixel art">
 
-# Nébula · Portfólio interativo
+# ✦ Nébula · Portfólio interativo ✦
 
-**Converse com a Nébula, minha gatinha-guia, ou comigo mesma, a Mari, e conheça três anos da minha trajetória em desenvolvimento.**
+**Um portfólio em forma de jogo: em vez de ler uma lista de projetos, você conversa com uma gatinha espacial ou com uma fadinha.**
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Canvas](https://img.shields.io/badge/Canvas-pixel%20art-ff7eb6?style=flat)
+<a href="https://mariinetic.github.io/bot-portfolio-game/"><img src="https://img.shields.io/badge/▶_JOGAR_AGORA-ff5fa2?style=for-the-badge&logoColor=white" alt="Jogar agora"></a>
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Canvas](https://img.shields.io/badge/Canvas-pixel_art-ff7eb6?style=flat-square)
+![Sem dependências](https://img.shields.io/badge/dependências-0-8fe3c0?style=flat-square)
+![GitHub Pages](https://img.shields.io/badge/deploy-GitHub_Pages-222?style=flat-square&logo=github)
 
 </div>
 
+<p align="center">
+  <img src="assets/img/preview-nebula.png" alt="Tela inicial: a Nébula numa ilha flutuante no céu estrelado, com a caixa de diálogo acima da cabeça" width="100%">
+</p>
+
 ---
 
-## Sobre
+## 🌸 Sobre
 
-Este é o meu portfólio em forma de jogo, no estilo **cozy game em pixel art com diálogos de RPG**. Em vez de uma página com uma lista de projetos, você conversa com uma personagem que fica numa ilha flutuante no céu e responde numa caixa de diálogo.
+Este é o meu portfólio, no estilo **cozy game em pixel art com diálogos de RPG**. Ele reúne meus três anos de trajetória em desenvolvimento, de 2024 até hoje: os projetos integradores da Fatec, os trabalhos de disciplina e os projetos que fiz por conta própria.
 
-Você escolhe com quem conversar, e pode trocar quando quiser:
+A conversa acontece numa ilha flutuante sob um céu de nebulosa. A personagem responde numa caixa de diálogo, com o texto aparecendo letra por letra, e você escolhe para onde ir, como num jogo.
 
-| Personagem | Como fala |
-|---|---|
-| **Nébula**, a gatinha-guia | fala de mim em terceira pessoa ("a Mari fez...") |
-| **Mari**, a minha versão fadinha, com asas, varinha e pozinho mágico | fala em primeira pessoa ("eu fiz...") |
+O bot é **roteirizado**: não usa IA nem API paga. Ele responde só com o conteúdo cadastrado aqui, então nunca inventa nada sobre mim, não tem custo e funciona hospedado em qualquer lugar.
 
-O bot é **roteirizado**: não usa IA nem API paga. Ele responde só com o conteúdo cadastrado aqui, então nunca inventa nada, não tem custo e funciona hospedado em qualquer lugar.
+## 🎮 As personagens
 
-O visual foi inspirado no meu jogo [Kitty Runner](https://github.com/mariinetic/kitty-runner), feito na disciplina de NoSQL.
+Você escolhe com quem conversar no seletor **"Conversar com"** e pode trocar quando quiser. Só uma aparece por vez, e a troca tem uma explosão de brilhos.
 
-## Funcionalidades
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="assets/img/nebula.svg" height="90" alt="Nébula"></td>
+    <td align="center" width="50%"><img src="assets/img/mari.svg" height="110" alt="Mari fadinha"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Nébula</b>, a gatinha-guia</td>
+    <td align="center"><b>Mari</b>, a minha versão fadinha</td>
+  </tr>
+  <tr>
+    <td>Uma gatinha espacial com antena de estrela. Fala de mim em terceira pessoa (<i>"A Mari foi Product Owner…"</i>), adora sonecas e sachê.</td>
+    <td>Asas que batem, varinha com estrela e pozinho mágico. Fala em primeira pessoa (<i>"Eu fui Product Owner…"</i>) e solta piadas de banco de dados.</td>
+  </tr>
+</table>
 
-- **Duas guias:** o seletor "Conversar com" troca entre a Nébula e a Mari a qualquer momento, com uma animação de brilhos. Só uma aparece por vez.
-- **Educadas e zoeiras:** respondem cumprimentos ("oi", "tudo bem?", "obrigada", "tchau"), mas se você perguntar algo nada a ver, levam na brincadeira e te trazem de volta para o portfólio, cada uma do seu jeito.
-- **Conversa guiada:** escolhas de diálogo e campo livre. Dá para perguntar o nome de um projeto, uma tecnologia ("vue", "mongodb"), um ano ("2025") ou um assunto ("contato", "linha do tempo").
-- **Projetos separados:** as **APIs da Fatec** (um projeto integrador por semestre, com empresa parceira, papel e contribuições), os **trabalhos de disciplina** e os **projetos pessoais** em 5 categorias.
-- **Cenário que muda com o assunto:** o céu fica rosa no "sobre", azul-noite na Fatec, aurora nos projetos pessoais e pôr do sol na stack.
+<p align="center">
+  <img src="assets/img/preview-mari.png" alt="A Mari fadinha contando sobre o projeto Timesync" width="100%">
+</p>
+
+## ✨ Funcionalidades
+
+- **Conversa guiada:** escolhas de diálogo que mudam a cada resposta, atalhos fixos e um campo para digitar livremente.
+- **Projetos separados:** as **6 APIs da Fatec** (com empresa parceira, papel e contribuições), os **trabalhos de disciplina** e os **projetos pessoais** em 5 categorias.
+- **Busca natural:** pergunte o nome de um projeto, uma tecnologia ou um ano, e ela entende mesmo sem acento.
+- **Stack por área:** linguagens, front-end, back-end, bancos de dados, IA e DevOps, cada uma com o número de projetos em que aparece.
+- **Cenário vivo:** estrelas piscando, estrelas cadentes, vagalumes, ilhas flutuando e um céu que muda de cor conforme o assunto.
+- **Educadas e zoeiras:** respondem cumprimentos, mas qualquer pergunta nada a ver vira piada, e elas trazem você de volta para o portfólio.
 - **Gamificação:** XP, nível, 7 conquistas e o selo **Super Fã** para quem explorar tudo.
-- **Histórico** da conversa e botão de recomeçar.
-- **Totalmente responsivo:** funciona sem zoom do celular pequeno (320px) ao monitor grande. Com o celular deitado, a personagem vai para a esquerda e o diálogo para a direita.
-- **Acessível:** navegação por teclado, foco visível e suporte a `prefers-reduced-motion`.
-- **Favicon** da Nébula em SVG, PNG, ICO e ícone para iPhone.
+- **Histórico** da conversa e botão para recomeçar.
+- **Totalmente responsivo:** do celular pequeno (320px) ao monitor grande, sem zoom. Com o celular deitado, a personagem vai para a esquerda e o diálogo para a direita.
+- **Acessível:** navegação por teclado, foco visível e respeito ao `prefers-reduced-motion`.
 
-## Estrutura
+<p align="center">
+  <img src="assets/img/preview-mobile.png" alt="Versão para celular com a Mari" width="32%">
+  &nbsp;
+  <img src="assets/img/preview-zoeira.png" alt="A Nébula zoando uma pergunta fora do assunto" width="32%">
+</p>
+
+## 💬 O que perguntar
+
+| Você digita | Ela responde com |
+|---|---|
+| `oi`, `tudo bem?`, `obrigada`, `tchau` | um cumprimento fofo |
+| `sobre`, `quem é você?` | quem eu sou e onde trabalho |
+| `linha do tempo` | minha jornada em três fases (2024, 2025 e 2026) |
+| `fatec`, `apis`, `disciplinas` | os projetos da faculdade |
+| `timesync`, `kitty runner`, `akpedia`… | os detalhes do projeto e o link do repositório |
+| `vue`, `python`, `mongodb`, `docker`… | todos os projetos com aquela tecnologia |
+| `2024`, `2025`, `2026` | tudo o que fiz naquele ano |
+| `agentes de ia`, `jogos`, `dados` | uma categoria de projetos pessoais |
+| `contato` | e-mail, LinkedIn e GitHub |
+| `o que falta?` | o que ainda falta para o selo Super Fã |
+| qualquer outra coisa | uma zoeira 😹 |
+
+## 🏆 Conquistas
+
+| Conquista | Como desbloquear |
+|---|---|
+| ★ Primeiro oi | mandar a primeira mensagem |
+| ★ Veterana Fatec | ver as 6 APIs |
+| ★ Fora da caixa | abrir os projetos pessoais |
+| ★ Caça-stacks | buscar por uma tecnologia |
+| ★ Networking | abrir o contato |
+| ★ Exploradora | ver 10 projetos |
+| ★ **Super Fã** | ver **todos** os projetos e as seções sobre mim |
+
+## 🗂️ Estrutura
 
 ```
-nebula-portfolio/
+bot-portfolio-game/
 ├── index.html            # estrutura da página
-├── assets/
-│   ├── css/
-│   │   └── style.css     # visual: caixas pixel, HUD, diálogo, painéis
-│   ├── js/
-│   │   ├── data.js       # todos os projetos (é aqui que você edita)
-│   │   ├── scene.js      # o mundo em <canvas>: céu, planeta, ilhas, personagens
-│   │   ├── ui.js         # XP, conquistas, selo, diálogo com digitação
-│   │   ├── bot.js        # falas da Nébula e da Mari e reconhecimento de perguntas
-│   │   └── main.js       # eventos e inicialização
-│   └── img/
-│       ├── favicon.svg, favicon-32.png, apple-touch-icon.png, icon-512.png
-│       ├── nebula.svg
-│       └── mari.svg
 ├── favicon.ico
-└── README.md
+├── vercel.json           # opcional, só para deploy na Vercel
+└── assets/
+    ├── css/
+    │   └── style.css     # caixas pixel, HUD, diálogo, painéis, responsividade
+    ├── js/
+    │   ├── data.js       # todos os projetos (é aqui que você edita)
+    │   ├── scene.js      # o mundo em <canvas>: céu, planeta, ilhas, personagens
+    │   ├── ui.js         # XP, conquistas, selo, histórico, diálogo com digitação
+    │   ├── bot.js        # falas da Nébula e da Mari e reconhecimento de perguntas
+    │   └── main.js       # eventos e inicialização
+    └── img/              # favicons, personagens em SVG e prints do README
 ```
 
-Os scripts são JavaScript puro, sem build e sem dependências, e são carregados nessa ordem no `index.html`.
+São JavaScript, CSS e HTML puros, sem framework, sem build e sem nenhuma dependência para instalar. As personagens e o cenário são desenhados em código, pixel por pixel.
 
-## Como rodar
+## 🚀 Como rodar
 
 Basta abrir o `index.html` no navegador.
 
-Se preferir um servidor local, por exemplo para testar no celular:
+Para testar com um servidor local, por exemplo no celular pela mesma rede Wi-Fi:
 
 ```bash
 # com Python
@@ -83,12 +138,16 @@ npx serve .
 
 Depois acesse `http://localhost:8000`. No VS Code, a extensão **Live Server** também funciona.
 
-## Como adicionar um projeto
+## 🛠️ Como personalizar
+
+<details>
+<summary><b>Adicionar um projeto</b></summary>
+
+<br>
 
 Abra `assets/js/data.js`.
 
-**Projeto pessoal ou de disciplina:** inclua uma linha na categoria certa, no formato
-`[repositório, ano, descrição, [tecnologias], nome de exibição]`:
+**Projeto pessoal ou de disciplina:** inclua uma linha na categoria certa, no formato `[repositório, ano, descrição, [tecnologias], nome de exibição]`:
 
 ```js
 ...mk("pes","IA e agentes",[
@@ -97,15 +156,18 @@ Abra `assets/js/data.js`.
 ]),
 ```
 
-O link para o GitHub é montado sozinho a partir do nome do repositório.
+**Projeto integrador (API):** adicione um objeto à lista `API` com `id`, `n` (nome), `y` (ano), `sem`, `co` (empresa parceira), `role`, `r` (repositório ou `null`), `d` (descrição), `t` (tecnologias) e `pts` (o que eu fiz).
 
-**Projeto integrador (API):** adicione um objeto à lista `API` com `id`, `n` (nome), `y` (ano), `sem`, `co` (empresa parceira), `role`, `r` (repositório ou `null`), `d` (descrição), `t` (tecnologias) e `pts` (o que você fez).
+O link para o GitHub é montado sozinho, e o projeto já entra nas buscas, nas listas por ano e na contagem do selo Super Fã.
 
-Pronto: o projeto já aparece nas listas, nas buscas por tecnologia e ano e na contagem do selo Super Fã.
+</details>
 
-## Como mudar as falas
+<details>
+<summary><b>Mudar as falas</b></summary>
 
-As respostas ficam no objeto `R` em `assets/js/bot.js`. Cada função chama `say(título, conteúdo)`: o título é digitado letra por letra e o conteúdo aparece logo depois.
+<br>
+
+As respostas ficam no objeto `R` em `assets/js/bot.js`. Cada função chama `say(título, conteúdo)`: o título é digitado letra por letra e o conteúdo aparece em seguida.
 
 Para que cada personagem fale do seu jeito, use `V(falaDaNebula, falaDaMari)`:
 
@@ -113,23 +175,50 @@ Para que cada personagem fale do seu jeito, use `V(falaDaNebula, falaDaMari)`:
 say(V("A stack da <b>Mari</b>!", "A minha <b>stack</b>!"), ...)
 ```
 
-Para ensinar novas palavras-chave, edite a função `route()` no mesmo arquivo.
+As zoeiras ficam na função `nope()`, e as palavras-chave ficam na função `route()`.
 
-## Como mudar as personagens
+</details>
 
-As duas são desenhadas em código, em `assets/js/scene.js`. Cada linha de `SPRITE` (Nébula), `MARI` ou `WING` (as asas da fadinha) é uma fileira de pixels, e cada letra é uma cor definida em `COL` ou `MC`. Por exemplo, para mudar o cabelo da Mari, troque as cores `h` (cabelo) e `H` (brilho) em `MC`.
+<details>
+<summary><b>Mudar as personagens</b></summary>
 
-## Créditos
+<br>
+
+As duas são desenhadas em `assets/js/scene.js`. Cada linha de `SPRITE` (Nébula), `MARI` ou `WING` (as asas da fadinha) é uma fileira de pixels, e cada letra é uma cor definida em `COL`, `MC` ou `WC`.
+
+Por exemplo, para mudar o cabelo da Mari, troque as cores `h` (cabelo) e `H` (brilho) em `MC`.
+
+</details>
+
+## 🌐 Deploy
+
+O site está publicado no **GitHub Pages**: **https://mariinetic.github.io/bot-portfolio-game/**
+
+Para publicar uma cópia:
+1. Suba os arquivos para um repositório no GitHub, com o `index.html` na raiz.
+2. Vá em **Settings → Pages**, escolha **Deploy from a branch**, depois `main` e `/ (root)`, e salve.
+3. Em um ou dois minutos o site estará em `https://<usuario>.github.io/<repositorio>/`.
+
+Também funciona na **Vercel**, porque o `vercel.json` já está incluído: basta importar o repositório em [vercel.com/new](https://vercel.com/new) com o preset **Other**.
+
+## 💜 Créditos
 
 - **Nébula e Mari:** personagens originais em pixel art, desenhadas em código.
-- **Fontes:** [Pixelify Sans](https://fonts.google.com/specimen/Pixelify+Sans) e [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P), do Google Fonts.
+- **Inspiração:** o visual do meu jogo [Kitty Runner](https://github.com/mariinetic/kitty-runner), feito na disciplina de NoSQL.
+- **Fontes:** [Nunito](https://fonts.google.com/specimen/Nunito) e [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P), do Google Fonts.
 
 ---
 
 <div align="center">
 
-Feito com carinho por **Mariana Oliveira** ·
-[GitHub](https://github.com/mariinetic) ·
-[LinkedIn](https://www.linkedin.com/in/oliveirasmari)
+### 👩‍💻 Mariana Oliveira
+
+Banco de Dados · FATEC São José dos Campos · Software Developer e AI Engineer
+
+[![GitHub](https://img.shields.io/badge/GitHub-mariinetic-222?style=flat-square&logo=github)](https://github.com/mariinetic)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-oliveirasmari-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/oliveirasmari)
+[![E-mail](https://img.shields.io/badge/E--mail-marianaoliveiray21@gmail.com-ff5fa2?style=flat-square&logo=gmail&logoColor=white)](mailto:marianaoliveiray21@gmail.com)
+
+<sub>Feito com carinho, pixels e muito café ☕</sub>
 
 </div>
